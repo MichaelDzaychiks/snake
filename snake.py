@@ -1,6 +1,7 @@
 import pygame
 import time
 import random
+from os.path import join
 
 pygame.init()
 
@@ -51,6 +52,9 @@ def game_over_screen():
     pygame.display.flip()
 
 def main():
+    music = pygame.mixer.Sound(join("content/vestia-zeta-aku-juga-mau-sound-effect-(128-kbps)-made-with-Voicemod-technology.mp3"))
+    music.set_volume(0.2)
+    music.play(-1)
     snake = [(100, 100), (80, 100), (60, 100)]
     direction = RIGHT
     fruit = (200, 200)
